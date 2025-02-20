@@ -217,3 +217,14 @@ Use Mapping: Use array mapping to iterate over the product list and render a car
 Pass Data Dynamically: Pass unique product information (e.g., name, price, image) to each card.
 
 Maintain Consistency: Ensure the layout remains uniform for all products.
+
+## **Milestone 9**
+-Product Form with Multiple Image Upload
+
+This project focuses on designing a user-friendly product form that allows users to enter product details and upload multiple images. The form ensures a smooth and efficient way to manage product information, making it suitable for e-commerce platforms, inventory systems, or online marketplaces.  
+
+The form includes fields for essential product details such as *name, description, price, category, and stock quantity*. It also provides an intuitive image upload feature where users can select multiple images at once. This enhances product presentation by allowing detailed visual representation.  
+
+To ensure data accuracy, the form implements *validation rules*, requiring users to input necessary information and upload images in supported formats. The ability to preview images before submission further improves user experience by allowing verification of uploaded files.  
+
+By integrating multiple image uploads, this form enhances the way products are displayed, helping businesses and sellers showcase their items more effectively. It is designed with *simplicity and efficiency* in mind, making product management seamless and convenient.
