@@ -286,3 +286,39 @@ Design a reusable card layout that shows key product information like the name, 
 - A working connection between the backend and frontend that sends product data automatically.
 - A dynamic display of products on the frontend using a clean, reusable card layout.
 - A seamless and user-friendly interface that updates with any changes made to the backend data.
+
+# 🏆 Milestone 12: Displaying User-Specific Products Dynamically
+
+## 📋 **Objective**
+
+In this milestone, the goal is to display products that are specific to each user based on their email. The system should ensure that users only see products associated with their account, creating a personalized experience.
+
+---
+
+### 🔥 **Steps to Follow**
+
+#### 1️⃣ **Backend Preparation**
+
+Set up a way for the system to recognize and filter products linked to each user's email. This ensures that only relevant product information is retrieved for each user.
+
+#### 2️⃣ **Frontend Data Retrieval**
+
+Implement a process to request user-specific product data from the backend. The system should automatically fetch the right data based on the user’s email.
+
+#### 3️⃣ **Dynamic Product Display**
+
+Once the data is retrieved, display the products dynamically. Each user should see their personalized list of products without needing to refresh or reload the page manually.
+
+#### 4️⃣ **Personalized User Interface**
+
+Ensure the product display component can handle and present this personalized information effectively, enhancing the user experience with relevant details.
+
+---
+
+### ✅ **Expected Outcome**
+
+- Products displayed are specific to the user’s account.
+- The platform provides a personalized experience tailored to each user’s data.
+- The system dynamically updates and reflects changes seamlessly.
+
+This milestone enhances personalization and improves the overall functionality of your application. 🚀
