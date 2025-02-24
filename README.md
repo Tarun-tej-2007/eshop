@@ -252,4 +252,37 @@ const productSchema = new mongoose.Schema({ name: { type: String, required: true
 ## **Conclusion**
 This e-commerce project follows a structured milestone-based approach, ensuring a **scalable, secure, and fully functional** web application.
 
+# Milestone 11
 
+
+## 📋 **Objective**
+
+The goal of this milestone is to connect the backend and frontend to display all product information dynamically. You will create a system where the frontend automatically fetches product data from the backend and displays it using a reusable component.
+
+---
+
+### 🔥 **Steps to Follow**
+
+#### 1️⃣ **Backend - Create an API Endpoint**
+
+First, set up an endpoint on the backend that sends all product data to the frontend. This will allow the frontend to request product information whenever needed.
+
+#### 2️⃣ **Frontend - Fetch Product Data**
+
+Next, implement a function on the frontend that retrieves the product data from the backend. This function will handle making requests and storing the data for display.
+
+#### 3️⃣ **Display Products Dynamically**
+
+Once the data is fetched, pass it to a product card component. Each product will be displayed dynamically, meaning that any updates from the backend will automatically reflect on the frontend without manual changes.
+
+#### 4️⃣ **Create a Product Card Component**
+
+Design a reusable card layout that shows key product information like the name, price, image, and any other relevant details. This ensures consistency and makes it easy to manage how products are displayed across the platform.
+
+---
+
+### ✅ **Expected Outcome**
+
+- A working connection between the backend and frontend that sends product data automatically.
+- A dynamic display of products on the frontend using a clean, reusable card layout.
+- A seamless and user-friendly interface that updates with any changes made to the backend data.
