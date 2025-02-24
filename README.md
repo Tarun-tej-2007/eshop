@@ -1,230 +1,204 @@
-# Milestone1
+# E-Commerce Application - Milestone Breakdown
 
-This project refers to the implementation of an e-commerce application containing a structured front-end and a back-end;
-the front end is responsible for the user's interface and experiences, while back-end is engaged in business logics, operations with databases and APIs.
+## **Milestone 1: Project Overview**
+This project involves the development of a full-stack e-commerce application with a structured **frontend** and **backend**:
+- **Frontend:** Handles user interface and experience.
+- **Backend:** Manages business logic, database operations, and API integrations.
 
-# Milestone 2
+---
 
-# Login Page - React & CSS
+## **Milestone 2: Login Page (React & CSS)**
+### **Overview**
+Developed a modern, responsive login page using **React.js** and **CSS** with the following features:
+- **Email and Password fields**
+- **"Remember Me" checkbox**
+- **"Forgot Password?" link**
+- **Submit button & Sign-up option**
+- **Icons for email input and password visibility toggle**
 
-## Overview
-
-This project is a simple, modern login page made using **React.js** and **CSS**. Features include:
-Email and Password input fields
-"Remember Me" checkbox
-"Forgot Password?" link
-Submit button
-Sign-up option
-Icons for email input and password visibility toggle
-
-## Features
-
-Responsive UI Designed for smooth customer experience with varying screen sizes.
-
-- **Password Visibility Toggle:** Users can toggle the password visibility.
-- **Validation (Optional):** Can be extended with form validation.
-
-## ????️ Technologies Used
-
+### **Technologies Used**
 - **React.js** - Component-based UI development
-- **CSS** - Styling for the form and layout
-- **React Icons** - Icons for email and password fields
+- **CSS** - Styling for layout and responsiveness
+- **React Icons** - Used for email input and password visibility toggle
 
-# Milestone 3: Backend Setup
+---
 
-## Overview
+## **Milestone 3: Backend Setup**
+### **Overview**
+Set up the backend infrastructure, including folder structuring, server configuration, database integration, and error handling.
 
-With Milestone 2 complete, we built the frontend foundation of our e-commerce application. In Milestone 3, we focused on setting up the backend by:
-Structuring backend folders
-Setting up a Node.js & Express server
-Connecting the project to MongoDB
-Implementing basic error handling
+### **Key Achievements**
+1. **Backend Folder Structure:**
+   ```
+   backend/
+   ├── controllers/   # Handles API logic  
+   ├── models/        # Defines database schemas  
+   ├── routes/        # Manages API endpoints  
+   ├── middleware/    # Custom middlewares (error handling, authentication, etc.)  
+   ├── config/        # Database connection setup  
+   ├── server.js      # Main server file  
+   ```
+2. **Server Setup:**
+   - Implemented **Express.js** for backend API handling.
+   - Used **dotenv** to manage environment variables.
+   - Configured server to run on **PORT 5000** (or from `.env`).
+3. **Database Integration:**
+   - Connected backend to **MongoDB Atlas** using **Mongoose**.
+   - Created models for **Products, Users, and Orders**.
+4. **Error Handling:**
+   - Implemented middleware for structured error responses.
+   - Improved debugging with meaningful error messages.
 
-This ensures that our application has a strong backend to support future development.
+### **Technologies Used**
+- **Node.js & Express.js** - Backend framework
+- **MongoDB Atlas & Mongoose** - Database management
+- **dotenv** - Environment variable management
+- **CORS & Body-Parser** - Middleware for API requests
 
-## Key Achievements
+---
 
-1. Organized Backend Folder Structure
-   We created a well-structured backend setup:
+## **Milestone 4: User Model, Controller & File Uploads**
+### **Overview**
+- Defined **User Model** for MongoDB.
+- Implemented **User Controller** for API logic.
+- Integrated **Multer** for image/file uploads.
 
-graphql
-Copy
-Edit
-backend/
-│── controllers/ # Handles API logic  
-│── models/ # Defines database schemas  
-│── routes/ # Manages API endpoints  
-│── middleware/ # Custom middlewares (error handling, authentication, etc.)  
-│── config/ # Database connection setup  
-│── server.js # Main server file  
- 2. Server Setup with Express.js
-Installed Express.js and configured the backend server.
-Used dotenv to manage environment variables.
-Server runs on PORT 5000 (or from .env file). 3. Database Connection (MongoDB Atlas)
-Connected the backend to MongoDB Atlas for data storage.
-Used Mongoose to define models for products, users, and orders.
-Verified the database connection with logs. 4. Implemented Basic Error Handling
-Added middleware to catch errors and return clear error messages.
-Improved debugging and user-friendly API responses.
+### **Key Achievements**
+1. **User Model (User.js):**
+   - Defined user schema with fields:
+     ```js
+     name, email, password (bcrypt-encrypted), role (Admin/User), profileImage
+     ```
+2. **User Controller:**
+   - Created API endpoints for user-related operations.
+3. **File Upload (Multer):**
+   - Configured file upload support for user profile images and product images.
 
-## Technologies Used
+---
 
-Node.js & Express.js – Backend framework
-MongoDB Atlas & Mongoose – Database management
-dotenv – Manage environment variables
-Cors & Body-Parser – Middleware for API requests
+## **Milestone 5: Sign-Up Page & Form Validation**
+### **Overview**
+Developed a **Sign-Up Page** with form validation to ensure correct data entry.
 
-# Milestone 4: User Model, Controller & File Uploads
+### **Key Achievements**
+1. **Form Fields:**
+   - Name: Required
+   - Email: Valid email format check
+   - Password: Minimum 8 characters, one uppercase letter, one number
+   - Real-time validation feedback
 
-# Overview
+### **Technologies Used**
+- **React.js** - Frontend development
+- **CSS** - Form styling
+- **JavaScript (ES6)** - Form validation logic
 
-In this milestone, we focused on setting up key backend features for user management and file uploads. With guidance from our mentor, we completed:
-User Model – Defines how user data is structured in MongoDB.
-User Controller – Handles API logic for user-related operations.
-Multer Setup – Enables image/file uploads for user profiles and products.
+---
 
-# Key Achievements
+## **Milestone 6: Secure User Signup & Password Encryption**
+### **Overview**
+Implemented **secure user signup** with encrypted password storage.
 
-1. Created the User Model (User.js)
-   Defined a Mongoose schema for user data, including:
-   name, email, password (with encryption using bcrypt).
-   role (Admin/User distinction).
-   profileImage field to store uploaded images.
+### **Key Achievements**
+1. **Signup API Endpoint (`/api/auth/signup`)**
+   - Accepts **Name, Email, Encrypted Password, User Role (Default: User)**
+   - Validates user input before storing.
+2. **Password Encryption:**
+   - Used **bcryptjs** for hashing passwords.
+3. **Database Storage:**
+   - Stored user data securely in MongoDB.
+4. **API Testing:**
+   - Verified user signup via **Postman**.
 
-# Milestone 5: Building the Sign-Up Page & Implementing Form Validation
+### **Technologies Used**
+- **Node.js & Express.js**
+- **MongoDB Atlas & Mongoose**
+- **bcryptjs** - Secure password hashing
+- **dotenv** - Environment variables
+- **Postman** - API testing
 
-# Overview
+---
 
-In this milestone, we focused on creating a Sign-Up Page where users can register an account. We also implemented form validation to ensure users enter correct and valid data before submitting the form. This helps improve the user experience and ensures the backend receives clean and structured information.
+## **Milestone 7: Backend Endpoint for User Login**
+### **Overview**
+Implemented backend authentication for **user login**.
 
-# Key Achievements
+### **Process**
+1. **User submits email & password**
+2. **Backend retrieves user details**
+3. **Password verification using bcrypt**
+4. **Successful login or error message**
 
-1. Built the Sign-Up Page (HTML, CSS, React.js)
-   Designed a clean and user-friendly registration form.
-   Used React.js for interactivity and CSS for styling.
-2. Implemented Form Validation
-   Name Field: Ensures the name is entered.
-   Email Validation: Checks if the email is in the correct format.
-   Password Validation: Requires at least 8 characters, one uppercase letter, and one number.
-   Error Messages: Displays real-time feedback when input is invalid.
+### **Security Measures**
+- **Password encryption using bcrypt**
+- **Prevents password theft & enhances privacy**
+- **Meets security compliance (GDPR, PCI-DSS)**
 
-# Technologies Used
+---
 
-React.js – Frontend Framework
-HTML & CSS – Form Structure & Styling
-JavaScript (ES6) – Form Validation Logic
+## **Milestone 8: Product Card Components**
+### **Overview**
+- Developed a **reusable product card component** for displaying products.
 
+### **Key Achievements**
+1. **Reusable Card Component:**
+   - Displays **name, price, image, and description**.
+2. **Dynamic Rendering:**
+   - Used `.map()` to iterate over product data.
+3. **Consistent Layout:**
+   - Ensured uniform styling across all cards.
 
+### **Technologies Used**
+- **React.js**
+- **CSS**
 
-# Milestone 6 - Secure User Signup & Password Encryption
+---
 
- Milestone 6: Backend Signup Endpoint & Secure Password Storage
+## **Milestone 9: Product Input Form & Image Upload**
+### **Overview**
+Developed a **product input form** with multiple image upload functionality.
 
- Overview
-In Milestone 5, we built the Signup Page in the frontend.
-Now, in Milestone 6, we are implementing a backend endpoint for signup that:
- Accepts user registration requests
- Encrypts passwords before storing them
- Saves user data securely in the MongoDB database
-
-This ensures that user credentials are protected from attacks like data breaches & password leaks.
-
- Key Achievements
- 1. Created a Secure Signup API Endpoint (/api/auth/signup)
-Users can now register securely with:
-Name
-Email
-Encrypted Password
-User Role (Default: User)
-API validates user input before saving.
- 2. Used bcryptjs for Password Encryption
-Before storing passwords, we encrypt them using bcrypt hashing.
-This prevents plain-text passwords from being saved in the database.
- 3. Stored User Data in MongoDB (Mongoose Schema)
-Created a User Model to store user details in MongoDB Atlas.
- 4. Tested Signup API Using Postman
-Successfully registered users via Postman API testing.
- Technologies Used
-Node.js & Express.js – Backend Framework
-MongoDB Atlas & Mongoose – Database Management
-bcryptjs – Password Encryption
-dotenv – Securely manage environment variables
-Postman – API Testing
+### **Features**
+- **Form Validation**
+- **Multiple Image Uploads**
+- **Real-time Image Previews**
 
 
-# Milestone 7: Backend Endpoint for User Login
-Welcome to Milestone 7! In this milestone, you’ll create a backend endpoint for user login, focusing on validating user credentials and verifying encrypted passwords stored in the database. Let’s break it down step by step.
+---
 
-Learning Goals 
-By the end of this milestone, you will:
+## **Milestone 10: Product Schema & API Endpoint**
+### **Overview**
+Defined **Product Schema** using Mongoose and implemented a **POST API endpoint**.
 
-Understand how to validate user credentials during login.
+### **Key Achievements**
+1. **Product Schema (Mongoose):**
+   ```js
+  const productSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    tags: { type: [String], required: true },
+    price: { type: Number, required: true },
+    stock: { type: Number, required: true },
+    category: { type: String, required: true },
+    images: { type: [String], required: true },
+    email: { 
+        type: String, 
+        required: true, 
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email address'] 
+    }
+}, { timestamps: true });
 
-Learn how to compare the encrypted password with the user’s input.
+   ```
+2. **API Endpoint (`/api/products`)**
+   - Validates and stores product details in **MongoDB**.
+   - Ensures **data integrity & validation**.
 
-Why Encrypt Passwords?
-Protect User Data: Keeps passwords safe even if the database is compromised.
+### **Technologies Used**
+- **Node.js & Express.js**
+- **MongoDB Atlas & Mongoose**
+- **Multer (for file uploads)**
 
-Privacy: Ensures passwords aren’t stored in plain text.
+---
 
-Compliance: Meets security standards like GDPR and PCI-DSS.
+## **Conclusion**
+This e-commerce project follows a structured milestone-based approach, ensuring a **scalable, secure, and fully functional** web application.
 
-Prevents Password Theft: Hashed passwords are difficult to decipher, increasing security.
-
-How Login Authentication Works 
-User Enters Credentials:
-
-The user provides their email/username and password on the login page.
-
-Fetch User Data from Database:
-
-The backend retrieves the user record based on the provided email/username.
-
-If the user is not found, return an error: "User does not exist."
-
-Compare Encrypted Passwords:
-
-Process the user's input password using the same hashing algorithm (e.g., bcrypt).
-
-Compare the resulting hash to the stored hashed password.
-
-If they match, the user is authenticated; if not, send an error.
-
-# Milestone 8: Creating and Displaying Card Components
-Welcome to Milestone 8!  In this milestone, you’ll learn how to create a card component and display multiple cards on the products page. This will help you showcase products effectively and improve the user experience of your e-commerce app.
-
-Learning Goals 
-By the end of this milestone, you will:
-
-Learn how to create a card component.
-
-Learn how to display those cards on the products page.
-
-Why Create Card Components?
-Showcase Products Effectively: Presents product details in a clear and visually appealing way.
-
-Reusable Design: Can be used across multiple pages or sections of the app.
-
-Improved User Experience: Makes it easy for users to browse and interact with products.
-
-Organized Layout: Keeps the homepage clean and structured.
-
-How to Display a Single Card for Multiple Products?
-Create a Dynamic Component: Design a single card component that accepts product details as props.
-
-Use Mapping: Use array mapping to iterate over the product list and render a card for each product.
-
-Pass Data Dynamically: Pass unique product information (e.g., name, price, image) to each card.
-
-Maintain Consistency: Ensure the layout remains uniform for all products.
-
-## **Milestone 9**
--Product Form with Multiple Image Upload
-
-This project focuses on designing a user-friendly product form that allows users to enter product details and upload multiple images. The form ensures a smooth and efficient way to manage product information, making it suitable for e-commerce platforms, inventory systems, or online marketplaces.  
-
-The form includes fields for essential product details such as *name, description, price, category, and stock quantity*. It also provides an intuitive image upload feature where users can select multiple images at once. This enhances product presentation by allowing detailed visual representation.  
-
-To ensure data accuracy, the form implements *validation rules*, requiring users to input necessary information and upload images in supported formats. The ability to preview images before submission further improves user experience by allowing verification of uploaded files.  
-
-By integrating multiple image uploads, this form enhances the way products are displayed, helping businesses and sellers showcase their items more effectively. It is designed with *simplicity and efficiency* in mind, making product management seamless and convenient.
