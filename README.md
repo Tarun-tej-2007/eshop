@@ -169,3 +169,4 @@ Write an endpoint that will receive new data and update the existing data inside
 
 ## Steps for Milestone 14📝
 Write an endpoint that will Delete the data form MongoDB using ID. In frontend we will add an delete button to the product card. When click on delete button we will send the product id to server endpoint.
+
