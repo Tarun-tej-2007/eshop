@@ -12,7 +12,7 @@ function CreateProduct() {
     
     
     let prevImg = []
-    if (images) {
+    if (images) { 
         images.forEach((ele, ind) => (
             prevImg.push(`http://localhost:5173/products-photo/${ele}`)
         ))
