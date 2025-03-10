@@ -7,18 +7,19 @@ const UserModel = require("../model/userModel")
 const {productUpload}=require("../middleware/multer")
 let path=require('path')
 const mongoose=require("mongoose")
-
+const auth=require("../middleware/auth")
 
 productRouter.post("/create-product",productUpload.array("images",10), catchAsyncError(async(req, res, next)=>{
     const { email,name, description,category,tags,price,stock} = req.body;
 
     const images =req.files.map((file)=>path.basename(file.path));
-    console.log(email,name, description,category,tags,price,images);
+    console.log(email,name, description,category,tags,price,images,"////");
 
     if (!email ||!name ||!description ||!category ||!tags ||!price ||!images ||!stock) {
        return  next(new Errorhadler("All fields are required",400))
     }
     let user=await UserModel.findOne({email})
+
     console.log(email)
     if(!user){
         return next(new Errorhadler("user is not exist",404))
@@ -94,6 +95,64 @@ productRouter.put("/update/:id",productUpload.array("images",10),catchAsyncError
 }))
 
 
+productRouter.post('/cart',auth, catchAsyncError(async (req, res, next) => {
+    const {productId, quantity } = req.body;
+    let userId=req.user_id 
+    if (!userId) {
+        return next(new Errorhadler("UserID isrequired", 400));
+    }
+    if (!mongoose.Types.ObjectId.isValid(productId)) {
+        return next(new Errorhadler("Invalid productId", 400));
+    }
+
+    if (!quantity || quantity < 1) {
+        return next(new Errorhadler("Quantity must be at least 1", 400));
+    }
+    const user = await UserModel.findById(userId);
+    if (!user) {
+        return next(new Errorhadler("User not found", 404));
+    }
+    const product = await ProductModel.findById(productId);
+    if (!product) {
+        return next(new Errorhadler("Product not found", 404));
+    }
+    const cartItemIndex = user.cart.findIndex(
+        (item) => item.productId.toString() === productId
+    );
+
+    if (cartItemIndex > -1) {
+        user.cart[cartItemIndex].quantity += quantity;
+    } else {
+        user.cart.push({ productId, quantity });
+    }
+
+    await user.save();
+
+    res.status(200).json({
+        status: true,
+        message: "Cart updated successfully",
+        cart: user.cart,
+    });
+}));
+
+productRouter.get("/cart",auth,catchAsyncError(async(req,res,next)=>{
+     
+    let userID=req.user_id
+    if(!userID){
+      return next(new Errorhadler("user id is required", 404));
+    }
+    if (!mongoose.Types.ObjectId.isValid(userID)) {
+      return next(new Errorhadler("Invalid userId", 400));
+    }
+
+    let cart=await UserModel.findById(userID).populate({
+       path:"cart.productId",
+       model:"Product"
+    })
+    
+    res.status(200).json({status:true,message:cart})
+
+}))
 
 
 

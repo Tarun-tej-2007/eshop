@@ -4,9 +4,11 @@ const app = express();
 app.use(express.json());
 const ErrorMiddleware= require("./middleware/error")
 const path=require("path")
+const cookieParser =require("cookie-parser")
+app.use(cookieParser())
 
 app.use(cors({
-  origin:"*",
+  origin:"http://localhost:5174",
   credentials:true
 }))
 

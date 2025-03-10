@@ -10,7 +10,7 @@ const IndividualProduct = () => {
     let id=location.state.id
      console.log(id)
     let [product,setProduct]=useState({})
-    
+
 
     useEffect(() => {
       const fetchData = async () => {
@@ -44,6 +44,28 @@ const IndividualProduct = () => {
             prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
         );
     };
+
+
+    const handleClick=async()=>{
+        
+        try {
+            let response=axios.post("http://localhost:8080/product/cart",{
+                productId:id,
+                quantity:quantity
+            }, {
+                withCredentials: true   
+            })
+    
+            if(response.status==200){
+                console.log("added to cart")
+            }
+            
+        } catch (error){
+            console.log(error)
+        }
+        
+
+   }
 
     return (
        
@@ -98,7 +120,7 @@ const IndividualProduct = () => {
                 </div>
 
                 {/* Add to Cart Button */}
-                <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
+                <button onClick={handleClick} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
                     Add to Cart
                 </button>
             </div>

@@ -110,7 +110,7 @@ function CreateProduct() {
         }
 
         try {
-            const response = await axios.post("http://localhost:8975/product/createProduct", multiPartFormData, {
+            const response = await axios.post("http://localhost:8080/product/create-product", multiPartFormData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 },
@@ -125,7 +125,7 @@ function CreateProduct() {
 
         catch (error) {
             console.log("Error", error)
-            alert("Product is Not Created")
+            // alert("Product is Not Created")
         }
 
     };
@@ -165,7 +165,7 @@ function CreateProduct() {
         <div className='flex justify-center items-center min-h-screen bg-cover bg-center' style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?office,technology')" }}>
             <div className='w-full max-w-lg bg-white p-6 rounded-lg shadow-lg backdrop-blur-md bg-opacity-90'>
                 <h2 className='text-2xl font-bold text-gray-800 mb-6 text-center'>Create a New Product</h2>
-                
+                {console.log(formData)}
                 <form  className='space-y-4'>
                     <div>
                         <label className='block font-medium text-gray-700'>Email</label>
