@@ -1,0 +1,18 @@
+meta {
+  name: uplod
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8181/user/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email":"jayanthkollepara@gmail.com",
+    "password":"123"
+  }
+}
