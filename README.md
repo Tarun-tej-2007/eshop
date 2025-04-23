@@ -1,669 +1,685 @@
-# Milestone1
+# E-Commerce Application - Milestone Breakdown
 
-This project refers to the implementation of an e-commerce application containing a structured front-end and a back-end;
-the front end is responsible for the user's interface and experiences, while back-end is engaged in business logics, operations with databases and APIs.
+# Milestone 1: Project Initialization
 
-# Milestone 2
-
-# Login Page - React & CSS
-
-## Overview
-
-This project is a simple, modern login page made using **React.js** and **CSS**. Features include:
-Email and Password input fields
-"Remember Me" checkbox
-"Forgot Password?" link
-Submit button
-Sign-up option
-Icons for email input and password visibility toggle
-
-## Features
-
-Responsive UI Designed for smooth customer experience with varying screen sizes.
-
-- **Password Visibility Toggle:** Users can toggle the password visibility.
-- **Validation (Optional):** Can be extended with form validation.
-
-## ????️ Technologies Used
-
-- **React.js** - Component-based UI development
-- **CSS** - Styling for the form and layout
-- **React Icons** - Icons for email and password fields
-
-# Milestone 3: Backend Setup
-
-## Overview
-
-With Milestone 2 complete, we built the frontend foundation of our e-commerce application. In Milestone 3, we focused on setting up the backend by:
-Structuring backend folders
-Setting up a Node.js & Express server
-Connecting the project to MongoDB
-Implementing basic error handling
-
-This ensures that our application has a strong backend to support future development.
+## Project Overview
+This milestone marks the beginning of building a full-fledged E-Commerce Application using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The project aims to provide hands-on experience in full-stack web development.
 
 ## Key Achievements
+- **MERN Stack Overview**: Gained an understanding of the MERN stack and its components.
+- **Project Setup**: Initialized the project repository and set up the foundational structure.
+- **REST API Planning**: Learned about REST API structure and endpoint design.
+- **Database Schema Design**: Explored the basics of structuring data models in MongoDB.
+- **Authentication Concepts**: Understood the role of authentication in web applications.
 
-1. Organized Backend Folder Structure
-   We created a well-structured backend setup:
+## Future Enhancements
+- Implement secure user authentication and authorization.
+- Develop API endpoints for product management and order handling.
+- Enhance database schema with relational structures for efficient data retrieval.
+- Set up a development environment with proper dependencies and configurations.
 
-graphql
-Copy
-Edit
+This milestone sets the foundation for building the complete e-commerce application by providing insights into server-client interaction and database management.
+
+
+# Milestone 2: Setting Up Development Environment
+
+## Project Overview
+In this milestone, we structured the project, set up the frontend and backend, and built the login page for the application. This step ensures a well-organized development environment for the upcoming features.
+
+## Key Achievements
+- **Project Folder Structure**: Organized the project into separate frontend and backend directories.
+- **React Frontend Setup**: Initialized a React application to build the user interface.
+- **Node.js Backend Setup**: Created a simple Node.js server to support API integration.
+- **Tailwind CSS Configuration**: Configured Tailwind CSS for efficient styling.
+- **Login Page Development**: Implemented a functional and styled login page.
+
+## Future Enhancements
+- Implement authentication and authorization mechanisms.
+- Develop API endpoints for user management and authentication.
+- Enhance UI/UX with additional styling and components.
+- Set up state management for better data handling.
+
+This milestone establishes the foundation for frontend and backend integration, setting the stage for upcoming features and functionalities.
+
+
+## Milestone 3: Backend Setup
+
+### Project Overview
+
+Set up the backend infrastructure, including folder structuring, server configuration, database integration, and error handling.
+
+### Key Achievements
+
+#### Backend Folder Structure
+
+```
 backend/
-│── controllers/ # Handles API logic  
-│── models/ # Defines database schemas  
-│── routes/ # Manages API endpoints  
-│── middleware/ # Custom middlewares (error handling, authentication, etc.)  
-│── config/ # Database connection setup  
-│── server.js # Main server file  
- 2. Server Setup with Express.js
-Installed Express.js and configured the backend server.
-Used dotenv to manage environment variables.
-Server runs on PORT 5000 (or from .env file). 3. Database Connection (MongoDB Atlas)
-Connected the backend to MongoDB Atlas for data storage.
-Used Mongoose to define models for products, users, and orders.
-Verified the database connection with logs. 4. Implemented Basic Error Handling
-Added middleware to catch errors and return clear error messages.
-Improved debugging and user-friendly API responses.
-
-## Technologies Used
-
-Node.js & Express.js – Backend framework
-MongoDB Atlas & Mongoose – Database management
-dotenv – Manage environment variables
-Cors & Body-Parser – Middleware for API requests
+├── controllers/   # Handles API logic  
+├── models/        # Defines database schemas  
+├── routes/        # Manages API endpoints  
+├── middleware/    # Custom middlewares (error handling, authentication, etc.)  
+├── config/        # Database connection setup  
+├── server.js      # Main server file  
+```
 
-# Milestone 4: User Model, Controller & File Uploads
+#### Server Setup
 
-# Overview
+- Implemented Express.js for backend API handling.
+- Used dotenv to manage environment variables.
+- Configured server to run on PORT 5000 (or from .env).
 
-In this milestone, we focused on setting up key backend features for user management and file uploads. With guidance from our mentor, we completed:
-User Model – Defines how user data is structured in MongoDB.
-User Controller – Handles API logic for user-related operations.
-Multer Setup – Enables image/file uploads for user profiles and products.
+#### Database Integration
 
-# Key Achievements
+- Connected backend to MongoDB Atlas using Mongoose.
+- Created models for Products, Users, and Orders.
 
-1. Created the User Model (User.js)
-   Defined a Mongoose schema for user data, including:
-   name, email, password (with encryption using bcrypt).
-   role (Admin/User distinction).
-   profileImage field to store uploaded images.
+#### Error Handling
 
-# Milestone 5: Building the Sign-Up Page & Implementing Form Validation
+- Implemented middleware for structured error responses.
+- Improved debugging with meaningful error messages.
 
-# Overview
+### Technologies Used
 
-In this milestone, we focused on creating a Sign-Up Page where users can register an account. We also implemented form validation to ensure users enter correct and valid data before submitting the form. This helps improve the user experience and ensures the backend receives clean and structured information.
+- **Node.js & Express.js** - Backend framework
+- **MongoDB Atlas & Mongoose** - Database management
+- **dotenv** - Environment variable management
+- **CORS & Body-Parser** - Middleware for API requests
 
-# Key Achievements
 
-1. Built the Sign-Up Page (HTML, CSS, React.js)
-   Designed a clean and user-friendly registration form.
-   Used React.js for interactivity and CSS for styling.
-2. Implemented Form Validation
-   Name Field: Ensures the name is entered.
-   Email Validation: Checks if the email is in the correct format.
-   Password Validation: Requires at least 8 characters, one uppercase letter, and one number.
-   Error Messages: Displays real-time feedback when input is invalid.
+## Milestone 4: User Model, Controller & File Uploads
 
-# Technologies Used
+### Project Overview
 
-React.js – Frontend Framework
-HTML & CSS – Form Structure & Styling
-JavaScript (ES6) – Form Validation Logic
+- Defined User Model for MongoDB.
+- Implemented User Controller for API logic.
+- Integrated Multer for image/file uploads.
 
+### Key Achievements
 
+#### User Model (User.js)
 
-# Milestone 6 - Secure User Signup & Password Encryption
+Defined user schema with fields:
 
- Milestone 6: Backend Signup Endpoint & Secure Password Storage
+- Name, Email, Password (bcrypt-encrypted), Role (Admin/User), ProfileImage
 
- Overview
-In Milestone 5, we built the Signup Page in the frontend.
-Now, in Milestone 6, we are implementing a backend endpoint for signup that:
- Accepts user registration requests
- Encrypts passwords before storing them
- Saves user data securely in the MongoDB database
+#### User Controller
 
-This ensures that user credentials are protected from attacks like data breaches & password leaks.
+- Created API endpoints for user-related operations.
 
- Key Achievements
- 1. Created a Secure Signup API Endpoint (/api/auth/signup)
-Users can now register securely with:
-Name
-Email
-Encrypted Password
-User Role (Default: User)
-API validates user input before saving.
- 2. Used bcryptjs for Password Encryption
-Before storing passwords, we encrypt them using bcrypt hashing.
-This prevents plain-text passwords from being saved in the database.
- 3. Stored User Data in MongoDB (Mongoose Schema)
-Created a User Model to store user details in MongoDB Atlas.
- 4. Tested Signup API Using Postman
-Successfully registered users via Postman API testing.
- Technologies Used
-Node.js & Express.js – Backend Framework
-MongoDB Atlas & Mongoose – Database Management
-bcryptjs – Password Encryption
-dotenv – Securely manage environment variables
-Postman – API Testing
+#### File Upload (Multer)
 
+- Configured file upload support for user profile images and product images.
 
-# Milestone 7: Backend Endpoint for User Login
-Welcome to Milestone 7! In this milestone, you’ll create a backend endpoint for user login, focusing on validating user credentials and verifying encrypted passwords stored in the database. Let’s break it down step by step.
 
-Learning Goals 
-By the end of this milestone, you will:
+## Milestone 5: Sign-Up Page & Form Validation
 
-Understand how to validate user credentials during login.
+### Project Overview
 
-Learn how to compare the encrypted password with the user’s input.
+Developed a Sign-Up Page with form validation to ensure correct data entry.
 
-Why Encrypt Passwords?
-Protect User Data: Keeps passwords safe even if the database is compromised.
+### Key Achievements
 
-Privacy: Ensures passwords aren’t stored in plain text.
+#### Form Fields
 
-Compliance: Meets security standards like GDPR and PCI-DSS.
+- **Name:** Required
+- **Email:** Valid email format check
+- **Password:** Minimum 8 characters, one uppercase letter, one number
+- Real-time validation feedback
 
-Prevents Password Theft: Hashed passwords are difficult to decipher, increasing security.
+### Technologies Used
 
-How Login Authentication Works 
-User Enters Credentials:
+- **React.js** - Frontend development
+- **CSS** - Form styling
+- **JavaScript (ES6)** - Form validation logic
 
-The user provides their email/username and password on the login page.
 
-Fetch User Data from Database:
+## Milestone 6: Secure User Signup & Password Encryption
 
-The backend retrieves the user record based on the provided email/username.
+### Project Overview
 
-If the user is not found, return an error: "User does not exist."
+Implemented secure user signup with encrypted password storage.
 
-Compare Encrypted Passwords:
+### Key Achievements
 
-Process the user's input password using the same hashing algorithm (e.g., bcrypt).
+#### Signup API Endpoint (/api/auth/signup)
 
-Compare the resulting hash to the stored hashed password.
+- Accepts Name, Email, Encrypted Password, User Role (Default: User)
+- Validates user input before storing.
 
-If they match, the user is authenticated; if not, send an error.
+#### Password Encryption
 
-# Milestone 8: Creating and Displaying Card Components
-Welcome to Milestone 8!  In this milestone, you’ll learn how to create a card component and display multiple cards on the products page. This will help you showcase products effectively and improve the user experience of your e-commerce app.
+- Used bcryptjs for hashing passwords.
 
-Learning Goals 
-By the end of this milestone, you will:
+#### Database Storage
 
-Learn how to create a card component.
+- Stored user data securely in MongoDB.
 
-Learn how to display those cards on the products page.
+#### API Testing
 
-Why Create Card Components?
-Showcase Products Effectively: Presents product details in a clear and visually appealing way.
+- Verified user signup via Postman.
 
-Reusable Design: Can be used across multiple pages or sections of the app.
+### Technologies Used
 
-Improved User Experience: Makes it easy for users to browse and interact with products.
+- **Node.js & Express.js**
+- **MongoDB Atlas & Mongoose**
+- **bcryptjs** - Secure password hashing
+- **dotenv** - Environment variables
+- **Postman** - API testing
 
-Organized Layout: Keeps the homepage clean and structured.
 
-How to Display a Single Card for Multiple Products?
-Create a Dynamic Component: Design a single card component that accepts product details as props.
+## Milestone 7: Backend Endpoint for User Login
 
-Use Mapping: Use array mapping to iterate over the product list and render a card for each product.
+### Project Overview
 
-Pass Data Dynamically: Pass unique product information (e.g., name, price, image) to each card.
+Implemented backend authentication for user login.
 
-Maintain Consistency: Ensure the layout remains uniform for all products.
+### Process
 
+1. User submits email & password.
+2. Backend retrieves user details.
+3. Password verification using bcrypt.
+4. Successful login or error message.
 
-## milestone-9
+### Security Measures
 
-###  Overview
-In this milestone, we created a **product input form** that allows users to enter product details and upload multiple images. The form ensures **data validation** and previews images before submission.
+- Password encryption using bcrypt.
+- Prevents password theft & enhances privacy.
+- Meets security compliance (GDPR, PCI-DSS).
 
-###  Features
- User-friendly **product input form**  
- **Multiple image uploads** with previews 
-  **Real-time validation** for form fields  
 
-###  Screenshots
-![Product Form Screenshot](URL_TO_YOUR_IMAGE)
+## Milestone 8: Product Card Components
 
-###  Installation & Usage
-1. Clone the repository:  
-   ```bash
-   git clone YOUR_REPOSITORY_LINK
-   cd ecommerce-follow-along
-## milestone 10 :product schema & API end point
+### Project Overview
 
-In this part of Milestone 9, we will define the product schema using Mongoose and create a POST API endpoint to validate and save product details in MongoDB.
+Developed a reusable product card component for displaying products.
 
- Learning Goals
-By the end of this milestone, you will:
- Learn how to write a Mongoose schema for products
-Implement data validation to ensure only valid data is saved
- Create a POST API endpoint to receive and store product data in MongoDB
- Understand the importance of data integrity and validation
+### Key Achievements
 
+- **Reusable Card Component:** Displays name, price, image, and description.
+- **Dynamic Rendering:** Used .map() to iterate over product data.
+- **Consistent Layout:** Ensured uniform styling across all cards.
 
- ## Milestone 11 - Dynamic Home Page
+### Technologies Used
 
-Overview
+- **React.js**
+- **CSS**
 
-Welcome to Milestone 11! 
- In this milestone, we will make our home page dynamic by displaying all the products stored in MongoDB. We will create an endpoint that retrieves product data and renders it dynamically using the product card component we created earlier.
 
-Learning Goals 
+## Milestone 9: Product Input Form & Image Upload
 
-By the end of this milestone, you will:
+### Project Overview
 
-Understand how to write an endpoint to fetch data from MongoDB.
+Developed a product input form with multiple image upload functionality.
 
-Learn how to receive data on the frontend.
+### Features
 
-Dynamically display product data using the existing product card component.
+- **Form Validation**
+- **Multiple Image Uploads**
+- **Real-time Image Previews**
 
-Steps to Complete Milestone 11
 
-1. Backend - Create an Endpoint to Fetch Products
+## Milestone 10: Product Schema & API Endpoint
 
-Create a new route to retrieve all products from the database and integrate it into the server.
+### Project Overview
 
-2. Frontend - Fetch and Display Products
+Defined Product Schema using Mongoose and implemented a POST API endpoint.
 
-Modify the home page component to fetch product data from the backend and display it dynamically using the product card component.
+### Key Achievements
 
-Testing the Implementation 
+#### Product Schema (Mongoose)
 
-Start your backend server.
+```javascript
+const productSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  tags: { type: [String], required: true },
+  price: { type: Number, required: true },
+  stock: { type: Number, required: true },
+  category: { type: String, required: true },
+  images: { type: [String], required: true },
+  email: {
+      type: String,
+      required: true,
+      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email address']
+  }
+}, { timestamps: true });
+```
 
-Start your frontend application.
+#### API Endpoint (/api/products)
 
-Visit the home page and ensure that all products from MongoDB are displayed dynamically.
+- Validates and stores product details in MongoDB.
+- Ensures data integrity & validation.
 
-Summary 
+### Technologies Used
 
-In this milestone, we:
+- **Node.js & Express.js**
+- **MongoDB Atlas & Mongoose**
+- **Multer** (for file uploads)
 
-Created a backend API to fetch all products from MongoDB.
 
-Fetched data on the frontend.
+## Milestone 11: Fetching Product Data from Backend
 
-Rendered products dynamically using the product card component.
+### Project Overview
 
-## Milestone 12 - My Products Page
+Created an API endpoint to retrieve product data from MongoDB and display it dynamically on the frontend using the Product Card Component.
 
-Overview
+### Key Achievements
 
-Welcome to Milestone 12! 
- In this milestone, we will create the My Products page, which will display all the products added by the logged-in user based on their email. We will create an endpoint that retrieves product data filtered by the user’s email and displays it dynamically using the product card component.
+- **API Endpoint:** Fetches all product data from MongoDB.
+- **Frontend Integration:** Implemented a function to retrieve and display product data.
+- **Dynamic Rendering:** Used Product Card Component for real-time product updates.
 
-Learning Goals 
+### Technologies Used
 
-By the end of this milestone, you will:
+- **Node.js & Express.js**
+- **MongoDB & Mongoose**
+- **React.js**
 
-Understand how to write an endpoint that filters data by email and retrieves products from MongoDB.
 
-Learn how to receive filtered data on the frontend.
+## Milestone 12: Filtering Products by User Email
 
-Dynamically display product data using the existing product card component.
+### Project Overview
 
-Steps to Complete Milestone 12 
+Created an API endpoint to retrieve product data filtered by user email, ensuring users see only their uploaded products.
 
-1. Backend - Create an Endpoint to Fetch User-Specific Products
+### Key Achievements
 
-Write an endpoint that retrieves all products associated with the logged-in user’s email and sends the data to the frontend.
+- **Filtered API Endpoint:** Retrieves products associated with a specific user.
+- **Frontend Integration:** Dynamically displays filtered products.
+- **Improved User Experience:** Personalized product display.
 
-2. Frontend - Fetch and Display User-Specific Products
+### Future Enhancements
 
-Create a function to fetch product data based on the user’s email and pass it dynamically to the product card component.
+- Implement authentication to auto-fetch the logged-in user's products.
+- Add pagination for large product lists.
+- Introduce sorting and filtering options (e.g., price, category).
 
-Testing the Implementation 
 
-Start your backend server.
+## Milestone 13: Filtering Products by User Email
 
-Start your frontend application.
+### Project Overview
 
-Visit the My Products page and ensure that only products associated with the logged-in user's email are displayed dynamically.
+Created an API endpoint to retrieve product data filtered by user email, ensuring users see only their uploaded products.
 
-Summary 
+### Key Achievements
 
-In this milestone, we:
+- **Filtered API Endpoint:** Retrieves products associated with a specific user.
+- **Frontend Integration:** Dynamically displays filtered products.
+- **Improved User Experience:** Personalized product display.
 
-Created a backend API to fetch user-specific products from MongoDB.
+### Future Enhancements
 
-Filtered product data based on the user’s email.
+- Implement authentication to auto-fetch the logged-in user's products.
+- Add pagination for large product lists.
+- Introduce sorting and filtering options (e.g., price, category).
 
-Displayed filtered products dynamically using the product card component.
 
-Now, your My Products page displays personalized product data dynamically! 🚀
+## Milestone 14: Deleting Products by ID
 
+### Project Overview
 
+This milestone focuses on implementing a **delete functionality** for uploaded products. Users can now remove a product from the database by clicking a **Delete** button, which sends the product ID to the backend for deletion.
 
-## Milestone 13 - Edit Uploaded Products
+### Key Achievements
 
-Overview
+- **Delete API Endpoint:** Allows products to be deleted using their unique ID.
+- **Frontend Integration:** Added a Delete button to product cards.
+- **Improved User Experience:** Users can remove unwanted products easily.
 
-Welcome to Milestone 13!  In this milestone, we will add functionality to edit uploaded products. We will implement an edit button and create a backend endpoint to update product details inside the MongoDB database.
+### Future Enhancements
 
-Learning Goals 
+- Implement a confirmation prompt before deletion.
+- Add authentication to ensure only the product owner can delete.
+- Introduce a soft delete feature to allow recovery of deleted products.
 
-By the end of this milestone, you will:
 
-Understand how to write an endpoint that updates existing data in MongoDB.
+## Milestone 15: Creating a Navbar Component
 
-Learn how to auto-fill a form with previous product data and provide an option to edit.
+### Project Overview
 
-Steps for Milestone 13 
+This milestone focuses on creating a **Navbar component** and integrating it into all pages to ensure smooth navigation across the application.
 
-1. Backend - Create an Update Endpoint
+### Key Achievements
 
-Write an endpoint that receives updated product data and modifies the existing data inside MongoDB.
+- **Reusable Navbar Component:** A single component used across multiple pages.
+- **Navigation Links:** Added links to Home, My Products, Add Product, and Cart.
+- **Responsive Design:** Ensured the Navbar adapts to different screen sizes.
+- **Improved User Experience:** Simplified navigation across the application.
 
-2. Frontend - Implement Edit Button & Auto-fill Form
+### Future Enhancements
 
-Add an edit button to the product card.
+- Implement authentication-based navigation (e.g., hide/show links based on login status).
+- Add dropdown menus for better organization.
+- Enhance styling for a more user-friendly experience.
 
-When the edit button is clicked, send the selected product’s data to a form.
 
-Auto-fill the form with previous product details.
+## Milestone 16: Creating a Product Info Page
 
-Provide an option to edit and save the changes.
+### Project Overview
 
-Testing the Implementation 
+This milestone focuses on creating a **Product Info Page** that displays all product details and allows users to select a quantity and add the item to their cart.
 
-Start your backend server.
+### Key Achievements
 
-Start your frontend application.
+- **Detailed Product Page:** Displays all relevant product information.
+- **Quantity Selector:** Users can choose the quantity of the product they want to purchase.
+- **Add to Cart Button:** Enables users to add selected products to their cart.
+- **Improved Shopping Experience:** Provides a seamless way to view and purchase products.
 
-Navigate to a product and click the edit button.
+### Future Enhancements
 
-Modify the product details and save the changes.
+- Implement a dynamic cart system with real-time updates.
+- Add product image carousel for better visualization.
+- Introduce customer reviews and ratings on the product page.
 
-Verify that the product data is updated in MongoDB.
 
-Summary 
+## Milestone 17: Adding Cart Functionality
 
-In this milestone, we:
+### Project Overview
 
-Created an API endpoint to update product details in MongoDB.
+This milestone focuses on implementing **cart functionality** by creating an endpoint to add products to the cart and store them in the database.
 
-Added an edit button to the product card.
+### Key Achievements
 
+- **Updated User Schema:** Modified schema to store cart products.
+- **Cart API Endpoint:** Created an endpoint to receive and store product details in the cart.
+- **Database Integration:** Successfully saved cart data in MongoDB.
+- **Enhanced Shopping Experience:** Allowed users to add items to their cart for later purchase.
 
+### Future Enhancements
 
-## Milestone 14 - Delete Product Functionality
+- Implement cart quantity updates and item removal.
+- Add authentication to associate carts with specific users.
+- Introduce a checkout process with payment integration.
 
-Overview
 
-Welcome to Milestone 14!  In this milestone, we will implement the functionality to delete a product. We will add a delete button to the product card and create a backend endpoint to remove a product from MongoDB using its ID.
+## Milestone 18: Fetching Cart Data
 
-Learning Goals 🎯
+### Project Overview
 
-By the end of this milestone, you will:
+This milestone focuses on implementing a **backend endpoint** to fetch all products stored in a user's cart and display them on the cart page.
 
-Understand how to write an endpoint that deletes a product by its ID from MongoDB.
+### Key Achievements
 
-Steps for Milestone 14 
+- **Cart API Endpoint:** Created an endpoint to retrieve all products inside a user's cart.
+- **User-Based Filtering:** Implemented logic to fetch cart items based on user email.
+- **Database Integration:** Successfully retrieved cart data from MongoDB.
+- **Improved User Experience:** Allowed users to view their saved cart items.
 
-1. Backend - Create a Delete Endpoint
+### Future Enhancements
 
-Write an endpoint that receives a product ID and deletes the corresponding product from MongoDB.
+- Implement real-time cart updates with WebSockets.
+- Add authentication to secure user-specific cart data.
+- Enhance cart UI to allow quantity updates and removals directly from the cart page.
 
-2. Frontend - Implement Delete Button
 
-Add a delete button to the product card.
+## Milestone 19: Cart Page UI & Quantity Management
 
-When the delete button is clicked, send the product ID to the backend endpoint.
+### Project Overview
 
-Testing the Implementation 
+This milestone focuses on building the *cart page UI* and implementing functionality to increase or decrease product quantity within the cart.
 
-Start your backend server.
+### Key Achievements
 
-Start your frontend application.
+- *Cart Page UI:* Designed and developed a frontend page to display cart products.
+- *Quantity Control:* Added + and - buttons to adjust product quantity.
+- *Backend Integration:* Created an API endpoint to update product quantity in the cart.
+- *Improved User Experience:* Enabled users to manage their cart directly from the UI.
 
-Click the delete button on a product.
+### Future Enhancements
 
-Verify that the product is removed from MongoDB.
+- Implement a persistent cart across user sessions.
+- Add a "Remove from Cart" button for individual products.
+- Introduce stock validation to prevent over-purchasing.
 
-Summary 
 
-In this milestone, we:
+## Milestone 20: Profile Page Implementation
 
-Created an API endpoint to delete a product from MongoDB by ID.
+### Project Overview
 
-Added a delete button to the product card.
+This milestone focuses on building the *profile page UI* and implementing a backend endpoint to fetch and display user data.
 
+### Key Achievements
 
+- *Profile Page UI:* Designed and developed a frontend profile page to display user details.
+- *User Data Fetching:* Created an API endpoint to retrieve user data using email.
+- *Displayed User Information:* Shown profile photo, name, and email in a dedicated section.
+- *Address Management:* Displayed user addresses with an option to add a new address.
+- *Improved User Experience:* Provided a structured view of user information and an intuitive way to manage addresses.
 
+### Future Enhancements
 
+- Implement authentication to secure user data.
+- Allow users to edit their profile information.
+- Enable multiple address management with default selection.
 
-# Milestone 15 - Navbar Component
 
-## Overview 
-In this milestone, we created a reusable Navbar component and integrated it into all the pages of our application. The navbar allows smooth navigation between different sections of our app, making it user-friendly and accessible on all screen sizes.
+# Milestone 21: Address Form Implementation
 
-## Learning Goals 
-By completing this milestone, we have learned:
-- How to create a Nav component.
-- How to reuse the same component across multiple pages.
-- How to make the Navbar responsive for different screen sizes.
+## Project Overview
+This milestone focuses on building the address form UI and managing user address inputs effectively.
 
-## Implementation Steps 
-1. **Created a new `Nav` component** with links to:
-   - Home
-   - My Products
-   - Add Product
-   - Cart
-2. **Ensured reusability** by adding the `Nav` component to all pages.
-3. **Implemented responsive design** to make the navbar adaptable to different screen sizes.
-4. **Tested navigation** to ensure smooth transitions between pages.
+## Key Achievements
+- **Address Form UI**: Designed and developed a frontend page for users to input their address details.
+- **State Management**: Implemented React state to handle form inputs dynamically.
+- **Navigation Integration**: Enabled navigation from the profile section to the address form page.
+- **Form Validation**: Applied basic validation to ensure required fields are filled correctly.
 
-## Milestone 16 - Product Info Page
+## Future Enhancements
+- Implement backend integration for storing and retrieving addresses.
+- Add form validation messages for better user experience.
+- Enhance UI styling for a more polished look.
 
-Overview 
 
-In this milestone, we created a Product Info Page that displays detailed product data, allows users to select a quantity, and includes an Add to Cart button.
+# Milestone 22: Address Storage Backend Implementation
 
-Learning Goals 
+## Project Overview
+This milestone focuses on building a backend endpoint to store user addresses in the database.
 
-By completing this milestone, we have learned:
+## Key Achievements
+- **Backend Endpoint**: Created an API endpoint to receive and store user address data.
+- **Database Integration**: Added the received address to the user's profile in the database.
+- **Data Handling**: Ensured address data is securely saved and retrievable.
+- **Frontend Connection**: Linked the address form with the backend to enable seamless data storage.
 
-How to create a new page to display detailed product information.
+## Future Enhancements
+- Implement authentication to ensure only logged-in users can add addresses.
+- Enable users to update or delete saved addresses.
+- Add error handling and validation for address input before storing it in the database.
 
-How to allow users to select a quantity before adding a product to the cart.
 
-How to implement an Add to Cart button for user interaction.
+# Milestone 23: Place Order Functionality & Order Schema
 
-Implementation Steps 
+## Project Overview
+This milestone focuses on implementing the 'Place Order' functionality, allowing users to select a delivery address and defining the order schema in the backend.
 
-Created a new Product Info Page that:
+## Key Achievements
+- **Place Order Button**: Added a 'Place Order' button inside the cart page that navigates to the address selection page.
+- **Select Address Page**: Created a frontend page that displays all saved addresses and allows users to choose a delivery address.
+- **Backend Address Retrieval**: Developed an API endpoint to fetch all saved addresses of the user.
+- **Order Schema**: Designed a Mongoose schema for storing order details in the database.
 
-Fetches and displays product details dynamically.
+## Future Enhancements
+- Implement authentication to ensure only logged-in users can place orders.
+- Add order confirmation and summary before finalizing the purchase.
+- Enhance UI for better user experience while selecting addresses.
 
-Shows product name, image, price, and description.
 
-Allows users to select a quantity using increment and decrement buttons.
+# Milestone 24: Order Confirmation Page
 
-Includes an Add to Cart button.
+## Project Overview
+This milestone focuses on creating an order confirmation page that displays the products being ordered, the selected delivery address, and the total price details.
 
-Ensured smooth user experience by handling errors and responsiveness.
+## Key Achievements
+- **Order Confirmation Page**: Designed and developed a page to summarize the order before finalizing the purchase.
+- **Product Display**: Listed all the products included in the order.
+- **Address Display**: Showcased the selected delivery address for the order.
+- **Total Price Calculation**: Displayed the total order value based on the cart contents.
+- **Final Place Order Button**: Added a button to confirm and place the order.
 
-Tested functionality to verify product data retrieval and cart integration.
+## Future Enhancements
+- Implement order tracking functionality after placing the order.
+- Allow users to edit or change the selected address before confirming.
+- Enhance UI with better visuals and user feedback upon order placement.
 
-## Milestone 17: Add Products to Cart
 
- Overview
+# Milestone 25: Place Order Backend Endpoint
 
-In this milestone, we will create a backend endpoint to add products to a user's cart and store them in the database.
+## Project Overview
+This milestone focuses on creating a backend endpoint to process and store order details in the database.
 
- Learning Goals
+## Key Achievements
+- **Place Order Endpoint**: Developed an API endpoint to handle order placement requests.
+- **User Identification**: Retrieved the user's `_id` using their email to associate orders correctly.
+- **Order Creation**: Stored order details for each product separately while maintaining the same delivery address.
+- **MongoDB Integration**: Used the previously defined order schema to save order details in the MongoDB order collection.
 
-By the end of this milestone, you will:
+## Future Enhancements
+- Implement order tracking functionality for users.
+- Send email confirmations to users upon order placement.
+- Improve error handling and validation to ensure reliable order processing.
 
-Modify the user schema to store cart products.
 
-Write an endpoint to receive product details and store them in the cart.
+# Milestone 26: Retrieve User Orders Endpoint
 
-Steps to Implement
+## Project Overview
+This milestone focuses on creating a backend endpoint to fetch all orders associated with a specific user.
 
-1️ Update the User Schema
+## Key Achievements
+- **Retrieve Orders Endpoint**: Developed an API endpoint to fetch all orders for a user.
+- **User Identification**: Retrieved the user's `_id` using their email to fetch relevant orders.
+- **Order Retrieval**: Fetched all orders linked to the user from the database.
+- **Response Handling**: Sent the retrieved orders as a response to the frontend.
 
-Modify the existing user schema to include a cart field, which will store an array of cart items.
+## Future Enhancements
+- Implement pagination for large order histories.
+- Add authentication and authorization to ensure only authorized users can view orders.
+- Enhance response formatting to include additional details like order status and estimated delivery time.
 
-2️ Create the Cart Schema (Optional)
+Absolutely! Here's a `README.md` for **Milestone 27** that matches the style of your Milestone 26:
 
-If needed, create a separate cart schema to manage cart items more effectively.
+---
 
-3️ Write the Endpoint to Add Products to Cart
+# Milestone 27: My Orders Frontend Page
 
-Implement an API endpoint that allows users to add products to their cart.
+## Project Overview  
+This milestone focuses on creating a **frontend page** that displays all orders associated with a specific user, using the backend endpoint developed in the previous milestone.
 
-Ensure that the product details, including quantity, are stored properly.
+## Key Achievements  
+- **My Orders Page**: Designed and implemented a new `my-orders` page in the frontend.
+- **API Integration**: Sent a GET request to the `/my-orders` endpoint using the user’s email.
+- **Order Display**: Dynamically displayed all the retrieved user orders on the page.
+- **Navigation Update**: Added the `My Orders` page link to the navigation bar for seamless access.
 
-4️ Connect the Route to the Server
+## Future Enhancements  
+- Improve UI with better styling and responsiveness.
+- Add loading states and error handling for better UX.
+- Implement search and filtering options for easier order tracking.
+- Integrate authentication to show orders only when the user is logged in.
 
-Integrate the cart route into the main server file to enable functionality.
+---
+# Milestone 28: Cancel Order Functionality
 
-Testing the Endpoint
+## Project Overview  
+This milestone focuses on enabling users to **cancel their orders** from the frontend and updating the order status on the backend using a new API endpoint.
 
-To test the API, use a tool like Postman or an API testing tool to send a request to add products to the cart.
+## Key Achievements  
+- **Cancel Button Integration**: Added a **Cancel Order** button for each active order on the `my-orders` page.
+- **Conditional Rendering**: Ensured the cancel button is **not displayed** for orders that are already canceled.
+- **Cancel Order Endpoint**: Created a **backend endpoint** to handle order cancellation requests.
+- **Order Status Update**: Used the `order-id` to fetch the corresponding order and update its status to **"Canceled"** in the database.
 
-Endpoint: POST /cart/add
+## Future Enhancements  
+- Display a confirmation prompt before canceling an order.
+- Show toast/alert messages for success or failure of the cancel action.
+- Allow admin users to manage canceled orders and restore if needed.
+- Log canceled orders for analytics and reporting.
 
-Request Body: Contains user ID, product ID, and quantity.
+---
+Here's a clean and consistent `README.md` for **Milestone 30**, continuing from your Milestone 29 setup:
 
-Expected Response: Confirms that the product has been successfully added to the cart.
+---
 
-## Milestone 18
-Cart Page Backend Endpoint
+# Milestone 30: Online Payment Integration Using PayPal API
 
-Overview
+## Project Overview  
+This milestone completes the PayPal payment integration process by using the **`react-paypal-js`** library to display actual PayPal payment options (like debit/credit cards) in the React application.
 
-This milestone focuses on creating a backend endpoint to fetch all products inside a user's cart. The endpoint will accept a user's email as a query parameter and return the corresponding cart details.
+## Key Achievements  
+- **PayPal SDK Integration**:  
+  - Installed and used the **`@paypal/react-paypal-js`** NPM package.
+  - Wrapped payment components with `PayPalScriptProvider` to initialize PayPal with the sandbox **Client ID**.
 
-Learning Goals:-
+- **PayPal Button Display**:  
+  - Conditionally rendered the **PayPal payment buttons** when "Online Payment" was selected on the order confirmation page.
 
-By the end of this milestone, you will:
+- **Smooth Payment Flow**:  
+  - Enabled users to proceed with PayPal payments using sandbox credentials.
+  - Set up initial configuration for transaction and payment handling.
 
-Create an endpoint to receive requests from the cart page.
+## NPM Package Used  
+```
+npm install @paypal/react-paypal-js
+```
 
-Implement backend logic to fetch all products inside a user's cart using their email.
+## Sample Code Snippet
+```jsx
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
-Understand how to structure a cart retrieval API in an e-commerce application.
+<PayPalScriptProvider options={{ "client-id": "YOUR_SANDBOX_CLIENT_ID" }}>
+  <PayPalButtons style={{ layout: "vertical" }} />
+</PayPalScriptProvider>
+```
 
-Steps for Milestone 18 
+## Future Enhancements  
+- Handle payment success and failure callbacks.
+- Store payment transaction details in the database.
+- Display order summary after successful payment.
+- Add loader and user feedback during transaction.
 
-Create a Backend Endpoint for the Cart Page
+---
 
-Implement a GET route to fetch a user's cart details.
+# Milestone 31: Global State Management with Redux
 
-Write an Endpoint to Get Products Inside Cart for a User
+## Project Overview  
+This milestone introduces **Redux** to manage global state in the application. Specifically, it focuses on storing the **user's email** in the Redux store so it can be accessed across all components easily.
 
-Accept email as a query parameter.
+## Key Achievements  
+- **Redux Setup**:  
+  - Installed and configured **`react-redux`**.
+  - Created a `store/` folder containing:
+    - `store.js` – Redux store configuration.
+    - `userActions.js` – Contains action creator `setEmail()` for updating global email state.
 
-Retrieve the user's cart using the provided email.
+- **User Email as Global State**:  
+  - Implemented a simple `userReducer` to manage the user’s email.
+  - Configured the reducer in the store and exported it for use across the app.
 
-Populate the cart items with product details.
+- **Provider Integration**:  
+  - Wrapped the `App` component inside the `Provider` component from `react-redux`.
+  - Passed the Redux `store` as a prop to ensure the entire app can access the global state.
 
-Return the cart details in JSON format.
+## Folder Structure  
+```
+src/
+│
+├── store/
+│   ├── store.js
+│   └── userActions.js
+├── index.js
+├── App.js
+└── ...
+```
 
+## NPM Packages Used  
+```
+npm install react-redux
+```
 
+## Future Enhancements  
+- Add more actions to manage other user details (e.g., name, login status).
+- Integrate Redux DevTools for easier debugging.
+- Implement **Redux Toolkit** for more efficient Redux code.
+- Use global state to improve route protection and conditional rendering.
 
-
-
-
-
-## Milestone 19 - Ecommerce Follow-Along Project
-
-Overview
-
-In Milestone 19, we implemented a Cart Page that displays products inside the cart. We also added functionality to increase and decrease the quantity of products using + and - buttons. Additionally, we created backend endpoints to handle these quantity updates.
-
-Learning Goals
-
-By completing this milestone, we:
-
-Built a frontend cart page that fetches and displays products.
-
-Added + and - buttons for quantity adjustments.
-
-Developed backend endpoints to modify product quantities in the cart.
-
-Steps Implemented
-
-Frontend (Cart Page UI)
-
-Fetched cart products from the API (built in Milestone 18).
-
-Displayed each product with an image, name, price, and quantity.
-
-Added + and - buttons to modify product quantity.
-
-Integrated API calls to update quantity when buttons are clicked.
-
-Backend (API Endpoints for Quantity Updates)
-
-Created an endpoint to increase product quantity.
-
-Created an endpoint to decrease product quantity (with a minimum limit of 1).
-
-Ensured data validation and error handling.
-
-## Milestone 20: Profile Page & User Data Endpoint
-Learning Goals 
-Create a backend endpoint to send user data.
-Develop a frontend profile page to display user details.
-Display profile photo, name, email, and addresses.
-Show an "Add Address" button and handle cases where no address exists.
-
-## Milestone 21: Address Input Form 
-Overview
-In this milestone, we created a frontend address input form that allows users to add a new address. The form includes fields for country, city, address lines, zip code, and address type.
-
-Features
-Address input form with fields:
-
-Country
-City
-Address Line 1
-Address Line 2 (Optional)
-Zip Code
-Address Type (Home/Work)
- Stores user input in React state
-Navigates to the form when clicking "Add Address" in the profile page
- On form submission, logs the data (to be sent to the backend later)
-
-
-
- 
-# Milestone 23 - Place Order Functionality
-
-## Overview
-In this milestone, we implemented the **Place Order** functionality by adding a button in the cart page, creating a Select Address page, and setting up a backend endpoint to fetch user addresses.
-
-## Features Implemented
-###  Frontend:
-- Added a **"Place Order"** button in the cart page that navigates to the **Select Address** page.
-- Created a **Select Address** page where users can view and select a delivery address.
-
-###  Backend:
-- Implemented a new API endpoint to retrieve the list of saved addresses for a user.
-- Created a **Mongoose Schema** for storing order details.
-
-
-# Milestone 24 - Order Confirmation Page
-
-## Overview
-In this milestone, we implemented the **Order Confirmation Page**, where users can review their order details before finalizing the purchase.
-
-## Features Implemented
-###  Frontend:
-- Created an **Order Confirmation Page** that displays:
-  - All products in the order.
-  - The selected delivery address.
-  - The total order value.
-- Added a **"Place Order"** button at the bottom of the page.
+---
