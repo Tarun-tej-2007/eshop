@@ -683,3 +683,7 @@ npm install react-redux
 - Use global state to improve route protection and conditional rendering.
 
 ---
+
+## Milestone 34
+This project implements secure route access using JWT authentication. Upon successful login, a JWT token is stored in the browser's cookies. For every protected route, the token is retrieved from the cookie and sent to the backend server for validation. A middleware function in the backend is responsible for verifying the JWT token and authenticating the user. This validation process is enforced on every page that requires authentication, ensuring users cannot access restricted pages without logging in. This setup strengthens security by maintaining session integrity across all parts of the application.
+
